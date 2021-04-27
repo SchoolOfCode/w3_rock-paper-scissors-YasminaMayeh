@@ -4,7 +4,8 @@
     margin: 0;
     padding: 0;
     text-align:center;
-    font-family:'New Tegomin', serif
+    font-family:'New Tegomin', serif;
+    background-color: rgb(238, 225, 201);
 
    
 }
@@ -12,7 +13,7 @@
 h1{
     padding: 20px;
     text-align: center;
-    background-color:rgb(228, 208, 182);
+    background-color:rgb(230, 208, 180);
     color: black;
     font-size: 50px;
 }
@@ -23,8 +24,18 @@ h2 {
 
 }
 
-form{
-    padding-top:20px;
+p {
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#input {
+    text-transform: capitalize;
+}
+
+form {
+    padding-top:10px;
     font-size: 20px;
     font-weight: bold;
 
@@ -36,11 +47,6 @@ form>button{
 }
 
 
-p {
-    padding: 10px;
-    font-size: 20px;
-    font-weight: bold;
-}
 
 .row{
     display: flex; 

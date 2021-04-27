@@ -2,10 +2,13 @@
 const rockButton = document.querySelector(".rockButton");
 const paperButton = document.querySelector(".paperButton");
 const scissorsButton = document.querySelector(".scissorsButton");
-const totalResult = document.getElementById(".totalResult")  
-const resultText= document.querySelector (".result")
-const submitButton = document.querySelector (".submit")
-const scoreboard = document.querySelector (".scoreboard")
+const totalResult = document.getElementById(".totalResult");
+const resultText= document.querySelector (".result");
+const submitButton = document.querySelector (".submit");
+const playerName = document.querySelector (".playerName");
+const points = document.querySelector (".points");
+const capitalizeFirstLetter = ([ first, ...rest ], locale = navigator.language) =>
+  first.toLocaleUpperCase(locale) + rest.join('')
 
 let win = 0 
 let lose = 0
@@ -87,16 +90,29 @@ paperButton.addEventListener("click" ,function(){start("paper")} )
 scissorsButton.addEventListener("click" , function(){start("scissors")})
 let username = "Player "
 submitButton.addEventListener ("click", submit)
+resetButton.addEventListener ("click", reset)
 
 function submit (){
     username =  document.getElementById("input").value;
-    if (username == "") {
+    if (username === "") {
         username = "Player"
     }
+
+    playerName.innerText = username[0].toUpperCase()+ username.substring(1)
     updateScoreboard ( 0 , 0 )
+
     
+}; 
+
+function reset (){
+    updateScoreboard( 0 , 0 )
+    win = 0 
+    lose = 0
+    draw = 0
+    total = 0
 }
- 
+
+
 function updateScoreboard (playerPoints, computerPoints){
-    scoreboard.innerText = username + " " + playerPoints  + " - " + computerPoints + " Computer"
+    points.innerText = playerPoints  + " - " + computerPoints
 }
