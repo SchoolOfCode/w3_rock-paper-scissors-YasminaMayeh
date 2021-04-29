@@ -100,8 +100,8 @@ function submit (){
 
     playerName.innerText = username[0].toUpperCase()+ username.substring(1)
     updateScoreboard ( 0 , 0 )
-
-    
+    document.getElementById("input").innerHTML.value = " "
+   
 }; 
 
 function reset (){
@@ -110,9 +110,11 @@ function reset (){
     lose = 0
     draw = 0
     total = 0
+    username = "Player"
+
 }
 
 
-function updateScoreboard (playerPoints, computerPoints){
+function updateScoreboard (playerPoints, computerPoints, ){
     points.innerText = playerPoints  + " - " + computerPoints
 }

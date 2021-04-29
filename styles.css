@@ -1,66 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap%27');
+@import url("https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap%27");
 
-*{
-    margin: 0;
-    padding: 0;
-    text-align:center;
-    font-family:'New Tegomin', serif;
-    background-color: rgb(238, 225, 201);
-
-   
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: "New Tegomin", serif;
+  background-color: rgb(238, 225, 201);
 }
 
-h1{
-    padding: 20px;
-    text-align: center;
-    background-color:rgb(230, 208, 180);
-    color: black;
-    font-size: 50px;
+h1 {
+  padding: 20px;
+  text-align: center;
+  background-color: rgb(230, 208, 180);
+  color: black;
+  font-size: 50px;
 }
 
 h2 {
-
-    padding: 10px;
-
+  padding: 10px;
 }
 
 p {
-    padding: 20px;
-    font-size: 20px;
-    font-weight: bold;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 #input {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 form {
-    padding-top:10px;
-    font-size: 20px;
-    font-weight: bold;
-
+  padding-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
-form>button{
-    height: 4vh;
-    width:6vw;
+form > button {
+  height: 4vh;
+  width: 6vw;
 }
 
-
-
-.row{
-    display: flex; 
-    justify-content: center;
+.row {
+  display: flex;
+  justify-content: center;
 }
 
 .row > button {
-    height: 20vh;
-    width: 20vw;
-    font-size: 60px;
-    margin: 30px;
-    background-color: white;
-    border-radius: 50%;
-    border-color: transparent;
-    cursor: pointer;
+  height: 20vh;
+  width: 20vw;
+  font-size: 60px;
+  margin: 30px;
+  background-color: white;
+  border-radius: 50%;
+  border-color: transparent;
+  cursor: pointer;
+}
+.row > button :hover {
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
 
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }
